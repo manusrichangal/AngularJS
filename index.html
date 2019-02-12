@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head><title>AngularJS</title>
+	<style type="text/css">
+		.ng-invalid.ng-dirty{border-color:red;}
+		.ng-valid.ng-dirty{border-color:green;}
+		input,textarea{border:2px solid;}
+	</style>
+
+</head>
+<body ng-app='myApp' ng-init="numbers=[1,2,3,4,5,6];">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="review.js"></script>
+		{{"hello " + "world"}}<br/>
+		{{5}}
+	
+		<p>Display till {{numbers[5]}}</p>
+		<p ng-repeat="number in numbers">{{number}}</p>
+	
+		<div ng-controller='MyController1'>
+	{{name}}  {{age}}
+	<p ng-hide="isSpy">Firstname is {{firstname}}</p>
+	<p ng-hide="isSpy">Lastname is {{lastname}}</p>
+	<p ng-show="isSpy">Fullname is {{fullname()}}</p>
+	<p ng-show="isSpy">Codename is {{codename}}</p>
+	</div>
+	
+	<div ng-controller='MyController'>
+		<div ng-repeat="employee in employees | orderBy:'-salary'">
+			<p>Firstname is {{employee.fname | lowercase | limitTo:3}}</p>
+			<p>Lastname is {{employee.lname | uppercase}}</p>
+			<p>Salary is {{employee.salary | currency}}</p>
+		</div>
+	</div>
+	
+	<div ng-controller="MyController2">
+	<button ng-click="count=count+1; toggleshow()">Click</button>
+	<p ng-hide="show">Count is {{count}}</p>
+	</div>
+	
+	<div ng-controller='MyController3'>
+	
+		<h2>REVIEWS</h2>
+		<div ng-repeat="review in reviews">
+		<div>
+				<p style=background-color:#FAEBD7>{{review.comment}}</p>
+				<p><b>{{review.by}}</b></p>
+		</div>
+		</div>
+		
+		<form name="reviewform" ng-submit="reviewform.$valid && addReview()" novalidate>
+			<p>{{form.comment}}</p>
+			<p>{{form.by}}</p>
+		
+		<label>Comment</label></br>
+		<textarea ng-model="form.comment" required></textarea></br>
+		<label>Email</label></br>
+		<input ng-model="form.by" type="email" required/>
+		<input type="submit" value="Add Review"/><br/>
+		
+		<p>form valid? {{reviewform.$valid}}</p>
+		
+		<userinformation></userinformation>
+	</form>
+		
+	</div>
+</body>
+</html>
