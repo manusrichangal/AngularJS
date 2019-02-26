@@ -2,7 +2,7 @@ function greetPerson(name: string)
 {
     let greet;
     if(name === "Manusri"){
-        greet="Hello Manu";
+        greet="Hello Manusri";
     }
     else{
         greet="Hi there";
@@ -52,7 +52,41 @@ console.log(typeof getArrowValue);
 
 var employee ={
     id:1,
-    greet : function(){
-
+    print : function(){
+        
+       setTimeout(() => {console.log(this.id)},2000); 
     }
+};
+employee.print();
+
+let getValue = function(value=10, bonus=value*0.1){
+    console.log(value+bonus);
+    console.log(arguments.length);
 }
+getValue();
+getValue(20);
+getValue(20,30);
+getValue(undefined,30);
+
+
+let displayColors = function(message, ...Colors){
+
+    console.log(message);
+    console.log(Colors);
+    console.log(arguments.length);
+
+    for(let i in Colors){
+        console.log(Colors[i]);
+    }
+    
+}
+let message="List of Colors";
+
+let colorArray=['Orange','Yellow','Indigo'];
+
+displayColors(message, ...colorArray);
+displayColors('Red');
+displayColors('Red','Blue');
+displayColors('Red','Blue','Green');
+
+
