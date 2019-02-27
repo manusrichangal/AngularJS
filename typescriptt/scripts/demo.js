@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 function greetPerson(name) {
     var greet;
     if (name === "Manusri") {
@@ -78,4 +79,54 @@ displayColors.apply(void 0, [message].concat(colorArray));
 displayColors('Red');
 displayColors('Red', 'Blue');
 displayColors('Red', 'Blue', 'Green');
+var fn = "M";
+var ln = "C";
+var p = {
+    fn: fn,
+    ln: ln
+};
+function CreatePerson(fn, ln, age) {
+    var fullname = fn + " " + ln;
+    return {
+        fn: fn,
+        ln: ln,
+        fullname: fullname,
+        isSenior: function () {
+            return age > 60;
+        }
+    };
+}
+var pf = CreatePerson("R", "G", 62);
+console.log(pf.fn);
+console.log(pf.ln);
+console.log(pf.fullname);
+console.log(pf.isSenior());
+//console.log(p.fn);
+//console.log(p.ln);
+var lnn = "last name";
+var person = (_a = {
+        "first name": "C"
+    },
+    _a[lnn] = "B",
+    _a);
+console.log(person);
+var arr = ["Chandler", "Bing", "22"];
+var x = arr[0], y = arr[1], g = arr[2];
+console.log(x);
+console.log(y);
+console.log(g);
+var colors = ['red', 'blue', 'green'];
+for (var a_1 in colors) {
+    console.log(colors[a_1]);
+}
+var colors1 = ['red1', 'blue1', 'green1'];
+for (var _i = 0, colors1_1 = colors1; _i < colors1_1.length; _i++) {
+    var color = colors1_1[_i];
+    console.log(color);
+}
+var letters = "ABC";
+for (var _b = 0, letters_1 = letters; _b < letters_1.length; _b++) {
+    var letter = letters_1[_b];
+    console.log(letter);
+}
 //# sourceMappingURL=demo.js.map

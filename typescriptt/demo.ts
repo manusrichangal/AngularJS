@@ -89,4 +89,62 @@ displayColors('Red');
 displayColors('Red','Blue');
 displayColors('Red','Blue','Green');
 
+let fn ="M";
+let ln="C";
 
+let p ={
+    fn,
+    ln
+};
+
+function CreatePerson(fn,ln, age){
+let fullname =fn+" "+ln;
+return {
+    fn,
+    ln,
+    fullname,
+    isSenior(){
+        return age>60;
+    }
+};
+}
+
+let pf = CreatePerson("R","G",62);
+console.log(pf.fn);
+console.log(pf.ln);
+console.log(pf.fullname);
+console.log(pf.isSenior());
+
+
+//console.log(p.fn);
+//console.log(p.ln);
+
+let lnn="last name"
+let person={
+    "first name": "C",
+    [lnn]:"B"
+};
+console.log(person);
+
+
+let arr=["Chandler","Bing","22"];
+let [x,y,g]=arr;
+
+console.log(x);
+console.log(y);
+console.log(g);
+
+let colors=['red','blue','green'];
+for(let a in colors){
+    console.log(colors[a]);
+}
+
+let colors1=['red1','blue1','green1'];
+for(let color of colors1){
+    console.log(color);
+}
+
+let letters="ABC";
+for(let letter of letters){
+    console.log(letter);
+}
