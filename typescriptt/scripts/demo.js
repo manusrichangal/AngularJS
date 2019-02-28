@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var _a;
 function greetPerson(name) {
     var greet;
@@ -21,8 +34,10 @@ if (a === 1) {
 }
 console.log(a);
 console.log(b);
+var j = 1000;
 var _loop_1 = function (i) {
-    setTimeout(function () { console.log(i); }, 1000);
+    setTimeout(function () { console.log(i); }, j);
+    j = j + 1000;
 };
 for (var i = 1; i <= 5; i++) {
     _loop_1(i);
@@ -47,7 +62,7 @@ var employee = {
     id: 1,
     print: function () {
         var _this = this;
-        setTimeout(function () { console.log(_this.id); }, 2000);
+        setTimeout(function () { console.log(_this.id); }, 1000);
     }
 };
 employee.print();
@@ -74,11 +89,11 @@ var displayColors = function (message) {
     }
 };
 var message = "List of Colors";
+displayColors(message, 'Red');
+displayColors(message, 'Red', 'Blue');
+displayColors(message, 'Red', 'Blue', 'Green');
 var colorArray = ['Orange', 'Yellow', 'Indigo'];
 displayColors.apply(void 0, [message].concat(colorArray));
-displayColors('Red');
-displayColors('Red', 'Blue');
-displayColors('Red', 'Blue', 'Green');
 var fn = "M";
 var ln = "C";
 var p = {
@@ -110,11 +125,11 @@ var person = (_a = {
     _a[lnn] = "B",
     _a);
 console.log(person);
-var arr = ["Chandler", "Bing", "22"];
-var x = arr[0], y = arr[1], g = arr[2];
-console.log(x);
-console.log(y);
-console.log(g);
+var arr = ["Chandler", "Bing", "Male"];
+var fname = arr[0], el = arr.slice(1);
+console.log(fname);
+console.log(el);
+//console.log(gender);
 var colors = ['red', 'blue', 'green'];
 for (var a_1 in colors) {
     console.log(colors[a_1]);
@@ -129,4 +144,57 @@ for (var _b = 0, letters_1 = letters; _b < letters_1.length; _b++) {
     var letter = letters_1[_b];
     console.log(letter);
 }
+var person1 = /** @class */ (function () {
+    function person1(name) {
+        this.name = name;
+        console.log(this.name + " " + "Construtor - Construtor Method");
+    }
+    person1.staticMethod = function (a) {
+        console.log(a + " " + "I am a Static Method - Static Method");
+    };
+    person1.prototype.greetPerson = function (b) {
+        console.log(b + " " + this.name + " " + "-Prototype Method");
+    };
+    person1.prototype.getID = function () {
+        return 10;
+    };
+    return person1;
+}());
+var p1 = new person1("Manu");
+person1.staticMethod("hi");
+p1.greetPerson("Hello");
+var child1 = /** @class */ (function (_super) {
+    __extends(child1, _super);
+    function child1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    child1.prototype.greetChild = function () {
+        console.log(this.name + " " + "I am a prototype method CHILD");
+    };
+    child1.prototype.getID = function () {
+        return _super.prototype.getID.call(this);
+    };
+    return child1;
+}(person1));
+var c1 = new child1("Sonu");
+c1.greetChild();
+console.log(c1.getID());
+var info;
+info = "hi";
+info = 10;
+info = true;
+console.log(info);
+var eyeColor;
+(function (eyeColor) {
+    eyeColor[eyeColor["brown"] = 10] = "brown";
+    eyeColor[eyeColor["black"] = 20] = "black";
+    eyeColor[eyeColor["blue"] = 30] = "blue";
+})(eyeColor || (eyeColor = {}));
+;
+var myeyeColor = eyeColor.blue;
+console.log(myeyeColor);
+console.log(eyeColor[myeyeColor]);
+var myTup = ["tuple", 878];
+console.log(myTup[0]);
+console.log(myTup[1]);
 //# sourceMappingURL=demo.js.map
