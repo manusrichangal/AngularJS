@@ -1,0 +1,12 @@
+.fancy{
+    color:#C0C0C0;
+}
+.girl{
+    height:21em; background-size: 1100pt; width:auto;
+    background-image:url('https://angular.io/generated/images/marketing/home/loved-by-millions.svg');
+    background-position: 1pt;
+    opacity: 0.5;
+}
+.g{
+    opacity: 1;
+}

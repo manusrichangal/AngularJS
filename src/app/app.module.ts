@@ -10,6 +10,7 @@ import { FooterComponent } from './template/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { CalcComponent } from './pages/calc/calc.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './/app-routing.module';
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    CalcComponent
   ],
   imports: [
     BrowserModule,
