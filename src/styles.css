@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Niramit:400,500i,700i');
+
+.pages{
+    padding-top:34px;
+}
+
+app-root{
+    font-family: Niramit;
+}
+
+h1{
+    font-weight: 500;
+    font-style: italic;
+}
