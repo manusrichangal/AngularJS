@@ -2,4 +2,64 @@
     font-size: 150%;
     font-style: normal;
     font-family: cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+    width: 20%;
+    padding: 10px;
+    color: white;
+    margin-top: 0px;
+}
+
+.calculator{
+    background-color: slategrey;
+    position: relative;
+    margin: 4% auto auto auto;
+    width: 300px;
+    text-align: center;
+    border-color: firebrick;
+    border-radius: 20px;
+    box-shadow: inset 2px 0px 10px -5px turquoise,
+                inset -5px 0px 15px -5px, turquoise,
+                inset 10px 0px 10px -12px, turquoise,
+                inset -2px 0px 4px -2px, turquoise,
+                inset -2px 0px 10px 0px, turquoise;
+
+}
+
+.result{
+    border-radius: 8px;
+}
+
+button{
+    border-radius: 8px;
+    width: 90px;
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid;
+    border-color: lightslategrey;
+    margin: 2px, 2px, 8px, 2px;
+    transition-duration: 0.4s;
+    box-shadow: inset 2px 0px 10px -5px turquoise,
+    inset -5px 0px 15px -5px, turquoise,
+    inset 10px 0px 10px -12px, turquoise,
+    inset -2px 0px 4px -2px, turquoise,
+    inset -2px 0px 10px 0px, turquoise,
+    
+    
+}
+
+.long{
+    width: 135px;
+}
+
+.responsive:hover{
+    background-color: lightslategrey;
+    color: white;
+}
+input{
+    width: 270px;
+    height: 40px;
+    text-align: right;
+    font-size: 1.7em;
 }

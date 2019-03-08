@@ -1,12 +1,18 @@
 .fancy{
-    color:#C0C0C0;
+    color:#2F4F4F;
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 14%;
+    
 }
 .girl{
-    height:21em; background-size: 1100pt; width:auto;
+    height: 25rem; background-size: 1100pt; width:auto;
     background-image:url('https://angular.io/generated/images/marketing/home/loved-by-millions.svg');
     background-position: 1pt;
-    opacity: 0.5;
-}
-.g{
-    opacity: 1;
+    background-position-x: 87%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
 }

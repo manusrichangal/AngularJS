@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./calc.component.css']
 })
 export class CalcComponent{
+
+  resutlt : string= '';
   longButtons:string[] = ['AC','CE'];
-  buttons:string[] = ['7','8','9','/','4','5','6','*','1','2','3','-','.','0','=','+'];
+  buttons:string[] = ['7','8','9','4','5','6','1','2','3','/','0','*','+','-','.','='];
 }
