@@ -1,3 +1,4 @@
+
 .sty{
     font-size: 150%;
     font-style: normal;
@@ -9,21 +10,17 @@
     padding: 10px;
     color: white;
     margin-top: 0px;
+    
 }
 
 .calculator{
-    background-color: slategrey;
+    background-color: rgb(57, 58, 59);
     position: relative;
     margin: 4% auto auto auto;
     width: 300px;
     text-align: center;
     border-color: firebrick;
     border-radius: 20px;
-    box-shadow: inset 2px 0px 10px -5px turquoise,
-                inset -5px 0px 15px -5px, turquoise,
-                inset 10px 0px 10px -12px, turquoise,
-                inset -2px 0px 4px -2px, turquoise,
-                inset -2px 0px 10px 0px, turquoise;
 
 }
 
@@ -40,13 +37,7 @@ button{
     border-color: lightslategrey;
     margin: 2px, 2px, 8px, 2px;
     transition-duration: 0.4s;
-    box-shadow: inset 2px 0px 10px -5px turquoise,
-    inset -5px 0px 15px -5px, turquoise,
-    inset 10px 0px 10px -12px, turquoise,
-    inset -2px 0px 4px -2px, turquoise,
-    inset -2px 0px 10px 0px, turquoise,
-    
-    
+
 }
 
 .long{
