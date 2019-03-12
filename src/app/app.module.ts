@@ -11,6 +11,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CalcComponent } from './pages/calc/calc.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CalcComponent } from './pages/calc/calc.component';
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    CalcComponent
+    CalcComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

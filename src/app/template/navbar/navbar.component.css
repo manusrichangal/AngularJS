@@ -3,4 +3,12 @@
     outline: none;
     font-weight: 700;
     font-style: italic;
+    text-shadow: 2px 2px 5px black;
 }
+.dropdown {
+    color: whitesmoke;
+    position: relative;
+    width: 100px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-shadow: 1px 0px 1px black;
+  }

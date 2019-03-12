@@ -1,7 +1,14 @@
 <nav class="navbar navbar-light bg-info">
   <span class="navbar-brand mb-0 h1 text-light" routerLink="/"><i class="fab fa-angular"></i>Angular Activity</span>
   <span class="mr-auto"></span>
-  <button class="btn btn-info mr-2" routerLink="/about">About</button>
+  <!--<button class="btn btn-info mr-1" routerLink="/about">About</button>
   <button class="btn btn-info" routerLink="/contact">Contact</button>
   <button class="btn btn-info text-light" routerLink="/calc">Calculator</button>
+  <button class="btn btn-info text-light" routerLink="/register">Register</button>-->
+  <select class="dropdown bg-light text-info">
+    <option value="About" class="btn btn-info" routerLink="/about"><b>ABOUT</b></option>
+    <option value="Contact" class="btn btn-info" routerLink="/contact">CONTACT</option>
+    <option value="Calculator" class="btn btn-info text-light" routerLink="/calc">CALCULATOR</option>
+    <option value="Register" class="btn btn-info text-light" routerLink="/register">REGISTER</option>
+  </select>
 </nav>
