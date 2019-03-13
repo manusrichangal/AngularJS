@@ -6,9 +6,35 @@
     text-shadow: 2px 2px 5px black;
 }
 .dropdown {
-    color: whitesmoke;
     position: relative;
-    width: 100px;
-    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-shadow: 1px 0px 1px black;
+    display: inline-block;
+    width: 120px;
   }
+
+.dropbtn {
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  

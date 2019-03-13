@@ -1,11 +1,38 @@
-<h2 class="h">----------------  Register Form  ----------------</h2>
+<h2 class="h">----------------  Registration Form  ----------------</h2>
 <h5 class="h4">Create your own account</h5><br>
+<div class="form">
 <form action="/action_page.php">
-  First name: <input type="text" name="fname" center><br><br>
-  Last name: <input type="text" name="lname"><br><br>
-  Phone Number: <input type="text" name="Phone" maxlength="10" minlength="10"><br><br>
-  Email Address: <input type="text" name="Email"><br><br>
-  Password: <input type="password" name="Password"><br><br>
-  Confirm Password: <input type="password" name="Password"><br><br>
-  <input type="submit" value="Submit">
+  <table bgcolor="#FFF5EE">
+    <tr>
+      <td>First name:</td>
+      <td><input type="text" name="fname" center><br><br></td>
+    </tr>
+    <tr>
+      <td>Last name:</td>
+      <td><input type="text" name="lname"><br><br></td>
+    </tr>
+    <tr>
+        <td>Gender:</td>
+        <td><input type="radio" name="gender" value="Male">Male<br><br></td>
+        <td><input type="radio" name="gender" value="Female">Female<br><br></td>
+      </tr>
+    <tr>
+      <td>Phone Number:</td>
+      <td><input type="text" name="Phone" maxlength="10" minlength="10"><br><br></td>
+    </tr>
+    <tr>
+      <td>Email Address: </td>
+      <td><input type="text" name="Email"><br><br></td>
+    </tr> 
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" name="Password"><br><br></td>
+    </tr>
+    <tr>
+      <td>Confirm Password:</td>
+      <td><input type="password" name="Password"><br><br></td>
+    </tr>
+  <input type="submit" value="Register!">
+</table>
 </form>
+</div>

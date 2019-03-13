@@ -6,4 +6,24 @@ text-align: center;
 .h4{
     color: gray;
     text-align: center;
-    }
+}
+
+div.form
+{
+    display: block;
+    text-align: center;
+}
+
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; 
+}
+
+table {
+    border: 2px solid #FFF5EE;
+  box-shadow: 20px 10px 8px #888888;
+  
+}
