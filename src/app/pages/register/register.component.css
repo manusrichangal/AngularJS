@@ -7,6 +7,25 @@ text-align: center;
     color: gray;
     text-align: center;
 }
+.h6{
+    color: black;
+    text-align: center;
+}
+button{
+    color: black;
+    border: none;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    display:block;
+    margin: 0 auto;
+}
+button:hover
+{
+background-image:none;
+background-color: rgb(245, 237, 224);
+}
+
 
 div.form
 {
@@ -26,4 +45,30 @@ table {
     border: 2px solid #FFF5EE;
   box-shadow: 20px 10px 8px #888888;
   
+}
+.cover{
+    height: 300px; width:auto;
+    position: absolute;
+    right: 40px;
+    bottom: 34px;
+}
+.cover1{
+    height: 300px; width:auto;
+    position: absolute;
+    left: 50px;
+    bottom: 34px;
+}
+.cover2{
+    width: 240px;
+    height: auto;
+    position: absolute;
+    left: 200px;
+    bottom: 34px;
+    size: 10pt;
+}
+.cover3{
+    height: 200px; width:auto;
+    position: absolute;
+    right: 230px;
+    bottom: 64px;
 }

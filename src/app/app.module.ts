@@ -12,6 +12,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CalcComponent } from './pages/calc/calc.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { RegisterComponent } from './pages/register/register.component';
     AboutComponent,
     ContactComponent,
     CalcComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
