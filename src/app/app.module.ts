@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
@@ -31,7 +31,9 @@ import { LoginComponent } from './pages/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
