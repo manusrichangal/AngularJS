@@ -16,17 +16,17 @@
       
       <router-outlet> </router-outlet>
       
-      
-    </div>
+  </div>
   
   
-  <app-footer></app-footer>
-  <h2>Register</h2>
+
+
+ <!-- <h2>Register</h2>
   <form [formGroup]="form">
+          
       <div class="form-group">
           <label for="username">Username</label>
           <input type="text" formControlName="username" class="form-control" placeholder="Enter Username"/>
-
 
       </div>
       <div class="form-group">
@@ -39,13 +39,21 @@
         <input type="password" formControlName="cnfpass" class="form-control"  placeholder="Confirm Password" />
 
     </div>
-    <button type="submit" class="btn btn-primary" (click)="onSubmit()"></button>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">submit</button>
   </form>
-  <!--<div class="Validations">
+ <div class="Validations" *ngIf="form.touched">
     <span>
-      <i class="fa fa-check-circle" style="color:green;" *nglf="form.comtrols.username.valid"></i>
-      <i class="fa fa-check-circle" style="color:red;" *nglf="form.comtrols.username.invalid"></i>
-      bla bla bla
+      <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.username.valid"></i>
+      <i class="fa fa-times-circle" style="color:red;" *ngIf="form.controls.username.invalid"></i>
+      Username should be minimum 4 characters long.
+    </span>
+<br>
+    <span>
+      <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.cnfpass.valid"></i>
+      <i class="fa fa-times-circle" style="color:red;" *ngIf="form.controls.cnfpass.invalid"></i>
+      Password and confirm password should match.
     </span>
   </div>-->
-  
+
+  <app-footer></app-footer>
+
