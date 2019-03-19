@@ -1,0 +1,94 @@
+<h2 class="h">----------------  Registration Form  ----------------</h2>
+<h6 class="h6">Already have an account?</h6>
+<button class="button1" routerLink="/login"><u>Click here</u></button>
+
+<form [formGroup]="form">
+          
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" formControlName="username" class="form-control" placeholder="Enter Username"/>
+
+    
+
+    
+        <label for="phone">Phone Number</label>
+        <input formControlName="phone" type="number" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" /><br>
+
+    
+
+    
+        <label for="password">Password</label>
+          <input type="password" formControlName="password" class="form-control" placeholder="Enter Password" />
+
+
+    
+
+    
+        <label for="confirm password">Confirm Password</label>
+        <input type="password" formControlName="cnfpass" class="form-control"  placeholder="Confirm Password" />
+
+  </div>
+
+  <button type="submit" class="sub" (click)="onSubmit()">Submit</button>
+  
+  <img src="../../../assets/Textbook-clipart-stacked-books-stack-of-books-clipart (1).jpg" class="cover" alt="Angular 7 ">
+<img src="../../../assets/depositphotos_19328007-stock-photo-stack-of-books.jpg" class="cover1" alt="Angular 7 ">
+<img src="../../../assets/g124.PNG" class="cover2" alt="Angular 7 ">
+<img src="../../../assets/h124.PNG" class="cover3" alt="Angular 7 ">
+
+</form>
+
+
+<div class="Validations" *ngIf="form.touched" style="text-align: center;">
+  <span>
+    <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.username.valid"></i>
+    <i class="fa fa-times-circle" style="color:red;" *ngIf="form.controls.username.invalid"></i>
+    Username should be minimum 5 characters long.
+  </span>
+<br>
+  <span>
+    <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.cnfpass.valid"></i>
+    <i class="fa fa-times-circle" style="color:red;" *ngIf="form.controls.cnfpass.invalid"></i>
+    Password and confirm password should match.
+  </span>
+</div>  
+</div>
+  
+<div style="margin: 10px, 0px, 20px, 0px;">
+<button mat-raised-button color="primary" (click)="setLocalStorage()">Set Local Stoarge</button>
+<button mat-raised-button color="primary" (click)="getLocalStorage()">Get Local Stoarge</button>
+<button mat-raised-button color="warn" (click)="delLocalStorage()">Delete Local Stoarge</button>
+</div>
+
+
+<!--<div class="form">
+<form action="/action_page.php">
+  <table bgcolor="#FFF5EE">
+    <tr>
+      <td>Username:</td>
+      <td><input type="text" name="lname"><br><br></td>
+    </tr>
+    <tr>
+      <td>Phone Number:</td>
+      <td><input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;" /><br><br></td>
+    </tr>
+    <tr>
+      <td>Email Address: </td>
+      <td><input type="text" name="Email"><br><br></td>
+    </tr> 
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" name="Password"><br><br></td>
+    </tr>
+    <tr>
+      <td>Confirm Password:</td>
+      <td><input type="password" name="Password"><br><br></td>
+    </tr>
+  <input type="submit" value="Register!">
+</table>
+</form>
+<img src="../../../assets/Textbook-clipart-stacked-books-stack-of-books-clipart (1).jpg" class="cover" alt="Angular 7 ">
+<img src="../../../assets/depositphotos_19328007-stock-photo-stack-of-books.jpg" class="cover1" alt="Angular 7 ">
+<img src="../../../assets/g124.PNG" class="cover2" alt="Angular 7 ">
+<img src="../../../assets/h124.PNG" class="cover3" alt="Angular 7 ">
+</div>-->

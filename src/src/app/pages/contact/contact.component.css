@@ -1,0 +1,14 @@
+.girl1{
+    height: 33rem; width:auto;
+    background-image:url('https://www.willacather.org/sites/default/files/images/1/bookstack.jpg');
+    background-position-x: 85%;
+    background-repeat: no-repeat;
+    background-size: 45%;
+
+}
+.text{
+    text-align: left;
+    width: 60%;
+    display: block;
+    float: left;
+}

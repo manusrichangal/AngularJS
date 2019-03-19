@@ -1,0 +1,112 @@
+.h{
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+
+    }
+    
+    .h4{
+        color: gray;
+        text-align: center;
+    }
+    
+    div.form
+    {
+        display: block;
+        text-align: center;
+    }
+    
+    form
+    {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left; 
+        position: absolute;
+        width: 240px;
+        height: 100px;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    
+    table {
+        border: 2px solid #FFF5EE;
+      box-shadow: 20px 10px 8px #888888;
+      
+    }
+    .h{
+        text-shadow: 2px 2px 4px #000000;
+        text-align: center;
+        }
+        
+        .h4{
+            color: gray;
+            text-align: center;
+        }
+        
+        div.form
+        {
+            display: block;
+            text-align: center;
+        }
+        
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left; 
+        }
+        
+        table {
+            border: 2px solid #FFF5EE;
+          box-shadow: 20px 10px 8px #888888;
+          
+        }
+        .cover{
+            height: 350px; width:auto;
+            position: absolute;
+            right: 40px;
+            bottom: 34px;
+        }
+        .cover1{
+            height: 350px; width:auto;
+            position: absolute;
+            left: 50px;
+            bottom: 34px;
+        }
+        .cover2{
+            width: 240px;
+            height: auto;
+            position: absolute;
+            left: 250px;
+            bottom: 34px;
+            size: 10pt;
+        }
+        .cover3{
+            height: 200px; width:auto;
+            position: absolute;
+            right: 270px;
+            bottom: 64px;
+        }
+
+
+        .sub {
+            background-color: rgb(66, 159, 221);
+            border: none;
+            color: white;
+            padding: 6px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+          .sub:hover
+          {
+          background-image:none;
+          background-color:rgb(0, 77, 128);
+          }
