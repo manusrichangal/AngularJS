@@ -13,7 +13,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { CalcComponent } from './pages/calc/calc.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
-import {NgxWebstorageModule} from 'ngx-webstorage';
+
 
 
 @NgModule({
@@ -34,9 +34,9 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    NgxWebstorageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

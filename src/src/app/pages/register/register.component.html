@@ -5,23 +5,18 @@
 <form [formGroup]="form">
           
   <div class="form-group">
-    <label for="username">Username</label>
-    <input type="text" formControlName="username" class="form-control" placeholder="Enter Username"/>
+    <label for="usernameInput">Username</label>
+    <input type="text" formControlName="username" class="form-control" placeholder="Enter Username"/><br>
 
     
-
-    
-        <label for="phone">Phone Number</label>
+        <label for="phoneInput">Phone Number</label>
         <input formControlName="phone" type="number" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" /><br>
 
-    
 
     
-        <label for="password">Password</label>
-          <input type="password" formControlName="password" class="form-control" placeholder="Enter Password" />
+        <label for="passwordInput">Password</label>
+          <input type="password" formControlName="password" class="form-control" placeholder="Enter Password" /><br>
 
-
-    
 
     
         <label for="confirm password">Confirm Password</label>
@@ -52,13 +47,6 @@
     Password and confirm password should match.
   </span>
 </div>  
-</div>
-  
-<div style="margin: 10px, 0px, 20px, 0px;">
-<button mat-raised-button color="primary" (click)="setLocalStorage()">Set Local Stoarge</button>
-<button mat-raised-button color="primary" (click)="getLocalStorage()">Get Local Stoarge</button>
-<button mat-raised-button color="warn" (click)="delLocalStorage()">Delete Local Stoarge</button>
-</div>
 
 
 <!--<div class="form">
