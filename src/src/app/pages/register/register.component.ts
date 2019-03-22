@@ -9,17 +9,19 @@ import {passValidator} from './validator';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent{
+export class RegisterComponent
+{
   
   form: FormGroup;
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder)
+  {
     this.form=this.fb.group({
-      username:['',[Validators.required,Validators.minLength(5)]],
-      phone: '',
-      password:'',
-      cnfpass:['',passValidator]
+      username:['',[Validators.required,Validators.minLength(5)], this.setUsername(), this.getUsername()],
+      phone: ['',this.setPhone(),this.getPhone()],
+      password:['',this.setPass(),this.getPass()],
+      cnfpass:['',passValidator,this.setCnf(),this.getCnf()]
     });
-
+    
     this.form.controls.password.valueChanges
     .subscribe(
       x=>this.form.controls.cnfpass.updateValueAndValidity()
@@ -30,6 +32,53 @@ export class RegisterComponent{
       x=>this.form.controls.username.updateValueAndValidity()
     )
   }
+  
+  
+  public setUsername(){
+   //let username='Manusri';
+   localStorage.setItem('username', 'Manusri');
+   //localStorage.setItem('username', JSON.stringify(username));
+
+  }
+  public getUsername(){
+   let u=  localStorage.getItem('username');
+   //JSON.parse(localStorage.getItem('username'));
+   console.log(u);
+  // let retrievedObject = localStorage.getItem('username');
+  // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+  }
+
+
+  public setPhone(){
+    localStorage.setItem('phone', '123456789');
+  }
+  public getPhone(){
+     let p = localStorage.getItem('phone');
+     console.log(p);
+  }
+
+
+  public setPass(){
+    localStorage.setItem('password', 'asdfg');
+
+  }
+  public getPass(){
+    let pass= localStorage.getItem('password');
+    console.log(pass);
+
+  }
+
+
+  public setCnf(){
+    localStorage.setItem('cnfpass', 'asdfg');
+
+  }
+  public getCnf(){
+    let cnf = localStorage.getItem('cnfpass');
+    console.log(cnf);
+  }
+
+
   onSubmit(){
     //console.log(this.form.value);
     this.form.markAsTouched();

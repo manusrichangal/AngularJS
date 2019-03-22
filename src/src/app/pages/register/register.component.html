@@ -6,21 +6,21 @@
           
   <div class="form-group">
     <label for="usernameInput">Username</label>
-    <input type="text" formControlName="username" class="form-control" placeholder="Enter Username"/><br>
+    <input type="text" [value]='username' (input)="getUsername($event)" formControlName="username" class="form-control" placeholder="Enter Username" required/><br>
 
     
         <label for="phoneInput">Phone Number</label>
-        <input formControlName="phone" type="number" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" /><br>
+        <input [value]='phone' (input)="getPhone($event)" formControlName="phone" type="number" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" required/><br>
 
 
     
         <label for="passwordInput">Password</label>
-          <input type="password" formControlName="password" class="form-control" placeholder="Enter Password" /><br>
+          <input type="password" formControlName="password" class="form-control" placeholder="Enter Password" required/><br>
 
 
     
         <label for="confirm password">Confirm Password</label>
-        <input type="password" formControlName="cnfpass" class="form-control"  placeholder="Confirm Password" />
+        <input type="password" formControlName="cnfpass" class="form-control"  placeholder="Confirm Password" required/>
 
   </div>
 
