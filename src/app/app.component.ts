@@ -10,6 +10,7 @@ import {passValidator} from './validator';
 export class AppComponent {
   title = 'Angular7';
 
+}
   //form: FormGroup;
   //constructor(private fb: FormBuilder){
     //this.form=this.fb.group({
@@ -27,5 +28,5 @@ export class AppComponent {
     //console.log(this.form.value);
    // this.form.markAsTouched();
    // }
-}
+
 

@@ -30,7 +30,24 @@
         right: 0;
         margin: auto;
     }
-    
+    .h6{
+        color: black;
+        text-align: center;
+    }
+    .button1{
+        color: black;
+        border: none;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        cursor: pointer;
+        display:block;
+        margin: 0 auto;
+    }
+    .button1:hover
+{
+background-image:none;
+background-color: rgb(245, 237, 224);
+}
     table {
         border: 2px solid #FFF5EE;
       box-shadow: 20px 10px 8px #888888;
@@ -104,6 +121,7 @@
             font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
+            border-radius: 10px;
           }
           .sub:hover
           {
