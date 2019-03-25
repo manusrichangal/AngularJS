@@ -15,12 +15,12 @@
 
     
         <label for="passwordInput">Password</label>
-          <input type="password" formControlName="password" class="form-control" placeholder="Enter Password" required/><br>
+          <input type="password" (input)="getPass($event)" formControlName="password" class="form-control" placeholder="Enter Password" required/><br>
 
 
     
         <label for="confirm password">Confirm Password</label>
-        <input type="password" formControlName="cnfpass" class="form-control"  placeholder="Confirm Password" required/>
+        <input type="password" (input)="getCnf($event)" formControlName="cnfpass" class="form-control"  placeholder="Confirm Password" required/>
 
   </div>
 

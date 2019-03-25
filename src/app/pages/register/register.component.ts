@@ -16,10 +16,10 @@ export class RegisterComponent
   constructor(private fb: FormBuilder)
   {
     this.form=this.fb.group({
-      username:['',[Validators.required,Validators.minLength(5)], this.setUsername(), this.getUsername()],
-      phone: ['',this.setPhone(),this.getPhone()],
-      password:['',this.setPass(),this.getPass()],
-      cnfpass:['',passValidator,this.setCnf(),this.getCnf()]
+      username:['',[Validators.required,Validators.minLength(5)], this.setUsername()],
+      phone: ['',this.setPhone()],
+      password:['',this.setPass()],
+      cnfpass:['',passValidator,this.setCnf()]
     });
     
     this.form.controls.password.valueChanges
@@ -33,50 +33,57 @@ export class RegisterComponent
     )
   }
   
+
   
   public setUsername(){
    //let username='Manusri';
-   localStorage.setItem('username', 'Manusri');
+  localStorage.setItem('username', 'Manusri');
+  console.log(localStorage.getItem('username'));
    //localStorage.setItem('username', JSON.stringify(username));
-
   }
-  public getUsername(){
-   let u=  localStorage.getItem('username');
+
+  //public getUsername(){
+   //let u=  if(localStorage.getItem('username')===null){
+     //this.username
+   //}
    //JSON.parse(localStorage.getItem('username'));
-   console.log(u);
+   //console.log(u);
   // let retrievedObject = localStorage.getItem('username');
   // console.log('retrievedObject: ', JSON.parse(retrievedObject));
-  }
+ //}
 
 
   public setPhone(){
     localStorage.setItem('phone', '123456789');
+    let p = localStorage.getItem('phone');
+    console.log(p);
   }
-  public getPhone(){
-     let p = localStorage.getItem('phone');
-     console.log(p);
-  }
+ // public getPhone(){
+
+  //}
 
 
   public setPass(){
     localStorage.setItem('password', 'asdfg');
-
-  }
-  public getPass(){
     let pass= localStorage.getItem('password');
     console.log(pass);
 
   }
+ // public getPass(){
+
+
+  //}
 
 
   public setCnf(){
     localStorage.setItem('cnfpass', 'asdfg');
-
-  }
-  public getCnf(){
     let cnf = localStorage.getItem('cnfpass');
     console.log(cnf);
+
   }
+ // public getCnf(){
+
+  //}
 
 
   onSubmit(){
