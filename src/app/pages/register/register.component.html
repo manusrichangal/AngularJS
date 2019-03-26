@@ -6,22 +6,22 @@
           
   <div class="form-group">
     <label for="usernameInput">Username</label>
-    <input type="text" [value]='username' (input)="getUsername($event)" formControlName="username" class="form-control" placeholder="Enter Username" required/><br>
-
+    <input required minlength = "5" type="text" formControlName="username" id="u" class="form-control" placeholder="Enter Username"/><br>
+   <!--(input)="getUsername($event)"  [value]='username'  #username="ngModel"--> 
     
-        <label for="phoneInput">Phone Number</label>
-        <input [value]='phone' (input)="getPhone($event)" formControlName="phone" type="number" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" required/><br>
+    <label for="phoneInput">Phone Number</label>
+    <input type="number" formControlName="phone" id="p" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" required/><br>
 
-
+ <!--(input)="getPhone($event)"  [value]='phone'-->
     
-        <label for="passwordInput">Password</label>
-          <input type="password" (input)="getPass($event)" formControlName="password" class="form-control" placeholder="Enter Password" required/><br>
+    <label for="passwordInput">Password</label>
+    <input type="password"  formControlName="password" id="pass" class="form-control" placeholder="Enter Password" required/><br>
 
-
+ <!--(input)="getPass($event)"-->
     
-        <label for="confirm password">Confirm Password</label>
-        <input type="password" (input)="getCnf($event)" formControlName="cnfpass" class="form-control"  placeholder="Confirm Password" required/>
-
+    <label for="confirm password">Confirm Password</label>
+    <input type="password"  formControlName="cnfpass" id="cnf" class="form-control"  placeholder="Confirm Password" required/>
+ <!--(input)="getCnf($event)"-->
   </div>
 
   <button type="submit" class="sub" (click)="onSubmit()">Submit</button>
