@@ -8,13 +8,11 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
 
+
   constructor()
   { 
 
   }
-  username:''
-  password:''
-
 ngOnInit()
   {
     localStorage.setItem('username', JSON.stringify("Manusri"));

@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder, FormsModule } from '@angular/forms';
 import {passValidator} from './validator';
+import { RegisterService } from '../register/register.service';
+
 
 
 @Component({
@@ -8,15 +10,19 @@ import {passValidator} from './validator';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
+
+
 export class RegisterComponent implements OnInit
 {
+  registerUserData={};
   
   form: FormGroup;
-  constructor(private fb: FormBuilder)
+  constructor(private fb: FormBuilder,private regser: RegisterService)
   {
     this.form=this.fb.group
     ({
-      username:['',[Validators.required,Validators.minLength(5)]],
+      username:['',[Validators.required,FormsModule,Validators.minLength(5)]],
       phone: [''],
       password:[''],
       cnfpass:['',passValidator]
@@ -32,20 +38,16 @@ export class RegisterComponent implements OnInit
       x=>this.form.controls.username.updateValueAndValidity()
     )
   }
+  
 
   ngOnInit()
   {
-    localStorage.setItem('username', JSON.stringify('Manusri'));
-    console.log(localStorage.getItem('username'));
+  
+  };
 
-    localStorage.setItem('phone', JSON.stringify('123456789'));
-    console.log(localStorage.getItem('phone'));
+  onSubmit(){
+    
+    this.regser.register(this.registerUserData);
 
-    localStorage.setItem('password', JSON.stringify('asdfg'));
-    console.log(localStorage.getItem('password'));
-
-    localStorage.setItem('cnfpass', JSON.stringify('asdfg'));
-    console.log(localStorage.getItem('cnfpass'));
   }
-
 }

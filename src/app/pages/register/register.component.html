@@ -5,26 +5,23 @@
 <form [formGroup]="form">
           
   <div class="form-group">
-    <label for="usernameInput">Username</label>
-    <input required minlength = "5" type="text" formControlName="username" id="u" class="form-control" placeholder="Enter Username"/><br>
-   <!--(input)="getUsername($event)"  [value]='username'  #username="ngModel"--> 
+    <label for="usernameInput">Username :</label>
+    <input  type="text" [(ngModel)]="registerUserData.username" name="username" formControlName="username" id="u" class="form-control" placeholder="Enter Username"/><br>
     
-    <label for="phoneInput">Phone Number</label>
-    <input type="number" formControlName="phone" id="p" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" required/><br>
-
- <!--(input)="getPhone($event)"  [value]='phone'-->
+    <label for="phoneInput">Phone Number :</label>
+    <input type="number" [(ngModel)]="registerUserData.number" name="number" formControlName="phone" id="p" pattern="^[0-9]*$" class="form-control" placeholder="Enter Phone Number" onKeyPress="if(this.value.length==10) return false;" required/><br>
     
-    <label for="passwordInput">Password</label>
-    <input type="password"  formControlName="password" id="pass" class="form-control" placeholder="Enter Password" required/><br>
-
- <!--(input)="getPass($event)"-->
+    <label for="passwordInput">Password :</label>
+    <input type="password" [(ngModel)]="registerUserData.password" name="password" formControlName="password" id="pass" class="form-control" placeholder="Enter Password" required/><br>
     
-    <label for="confirm password">Confirm Password</label>
-    <input type="password"  formControlName="cnfpass" id="cnf" class="form-control"  placeholder="Confirm Password" required/>
- <!--(input)="getCnf($event)"-->
+    <label for="confirm password">Confirm Password :</label>
+    <input type="password" [(ngModel)]="registerUserData.cnfpassword" name="cnfpassword"formControlName="cnfpass" id="cnf" class="form-control"  placeholder="Confirm Password" required/>
+    
   </div>
 
   <button type="submit" class="sub" (click)="onSubmit()">Submit</button>
+
+
   
   <img src="../../../assets/Textbook-clipart-stacked-books-stack-of-books-clipart (1).jpg" class="cover" alt="Angular 7 ">
 <img src="../../../assets/depositphotos_19328007-stock-photo-stack-of-books.jpg" class="cover1" alt="Angular 7 ">

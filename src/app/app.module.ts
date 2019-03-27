@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 
 
+
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { NavbarComponent } from './template/navbar/navbar.component';
@@ -14,6 +15,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { CalcComponent } from './pages/calc/calc.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterService } from './pages/register/register.service';
 
 
 
@@ -34,9 +36,9 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 
