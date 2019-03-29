@@ -48,6 +48,5 @@ export class RegisterComponent implements OnInit
   onSubmit(){
     
     this.regser.register(this.registerUserData);
-
   }
 }
