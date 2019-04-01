@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup, Validators, FormBuilder, FormsModule } from '@angular/forms';
 import {passValidator} from './validator';
 import { RegisterService } from '../register/register.service';
@@ -13,7 +13,7 @@ import { RegisterService } from '../register/register.service';
 
 
 
-export class RegisterComponent implements OnInit
+export class RegisterComponent
 {
   registerUserData={};
   
@@ -38,15 +38,8 @@ export class RegisterComponent implements OnInit
       x=>this.form.controls.username.updateValueAndValidity()
     )
   }
-  
-
-  ngOnInit()
-  {
-  
-  };
 
   onSubmit(){
-    
     this.regser.register(this.registerUserData);
   }
 }
