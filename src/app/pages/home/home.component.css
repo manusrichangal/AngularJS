@@ -16,8 +16,6 @@
     margin-right: auto;
 }
 
-
-
 .btn {
     background-color: #4CAF50;
     border: none;
@@ -30,6 +28,7 @@
     margin: 4px 2px;
     cursor: pointer;
   }
+  
   .btn:hover
   {
   background-image:none;
