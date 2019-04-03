@@ -1,47 +1,50 @@
-import { Component } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import {passValidator} from './validator';
-import { HttpClient, HttpParams } from '@angular/common/http'
-import { post } from './post';
-import { Observable } from 'rxjs/Observable'
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Angular7';
 
-  readonly ROOT_URL='https://jsonplaceholder.typicode.com';
+  constructor(private activatedRoute: ActivatedRoute) {}
 
-  posts : Observable<any>;
+  data: Observable<any>;
 
-  constructor(private http: HttpClient) {}
+  ngOnInit(){
+    this.data=new Observable(observer => {
+      setTimeout(() => {
+        observer.next(1);
+      }, 1000);
 
-  getPosts(){
+      setTimeout(() => {
+        observer.error(new Error("Subscription Error!"));
+      },3000);
 
-    let params= new HttpParams().set('userId','1');
-    this.posts= this.http.get(this.ROOT_URL + '/posts', { params })
+      setTimeout(() => {
+        observer.next(2);
+      }, 5000);
+
+      setTimeout(() => {
+        observer.complete();
+      }, 6000);
+    });
+    
+    let subscriber1= this.data.subscribe(value=> {
+      console.log('manu',value)
+      subscriber1.unsubscribe();
+    }, error =>{
+      console.log(error)
+    })
+
+    let subscriber2= this.data.subscribe(value=> {
+      console.log('sonu',value)
+    }, error =>{
+      console.log(error)
+    })
   }
-
 }
-  //form: FormGroup;
-  //constructor(private fb: FormBuilder){
-    //this.form=this.fb.group({
-      //username:['', Validators.required ,Validators.minLength(4)],
-     // password:'',
-      //cnfpass:['',passValidator]
-    //});
-
-   // this.form.controls.password.valueChanges
-    //.subscribe(
-    //  x=>this.form.controls.cnfpass.updateValueAndValidity()
-   // )
-  //}
- // onSubmit(){
-    //console.log(this.form.value);
-   // this.form.markAsTouched();
-   // }
-
 
