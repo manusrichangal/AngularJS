@@ -3,15 +3,15 @@
 <h5 class="h4">Write without fear, Edit without Mercy </h5><br>
 <h6 class="h6">New Register ?</h6><button class="button1" routerLink="/register"><u>Sign up</u></button>
 <div class="form">
-<form action="/action_page.php">
+<form (submit)="loginUser($event)">
   <table bgcolor="#FFF5EE">
     <tr>
       <td>Email Address: </td>
-      <td><input  minlength ="5" type="text" name="Email" placeholder="Enter Username"><br><br></td>
+      <td><input  minlength ="5" type="email" id="email" placeholder="Enter Username"><br><br></td>
     </tr> 
     <tr>
       <td>Password:</td>
-      <td><input type="password" name="Password" placeholder="Enter Password"><br><br></td>
+      <td><input type="password" id="password" placeholder="Enter Password"><br><br></td>
     </tr>
     <input type="submit" class="sub" value="Log In">
   </table>

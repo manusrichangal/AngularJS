@@ -10,10 +10,17 @@ import { FormBuilder } from '@angular/forms';
 export class LoginComponent{
 
 
-  constructor()
-  { 
-    
+  constructor(){}
+
+  loginUser(event)
+  {
+    event.preventDefault()
+    const target= event.target
+    const email=target.querySelector('#email').value
+    const password=target.querySelector('#password').value
+    console.log(email,password)
   }
+
 
 
 }

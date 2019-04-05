@@ -16,6 +16,7 @@ import { CalcComponent } from './pages/calc/calc.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterService } from './pages/register/register.service';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -37,7 +38,21 @@ import { RegisterService } from './pages/register/register.service';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
+      },
+      {
+        path: '',
+        component: HomeComponent
+      }
+    ])
   ],
   providers: [RegisterService],
   bootstrap: [AppComponent]
