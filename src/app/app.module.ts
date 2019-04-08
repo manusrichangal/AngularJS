@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http'
 
 
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
+
 import { NavbarComponent } from './template/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -17,13 +17,15 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterService } from './pages/register/register.service';
 import { RouterModule } from '@angular/router';
+import { ProfileComponent } from './pages/profile/profile.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
+
     NavbarComponent,
     HomeComponent,
     FooterComponent,
@@ -31,7 +33,9 @@ import { RouterModule } from '@angular/router';
     ContactComponent,
     CalcComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+
   ],
   imports: [
     BrowserModule,

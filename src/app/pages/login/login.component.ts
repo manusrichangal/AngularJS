@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { RegisterService } from '../register/register.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { FormBuilder } from '@angular/forms';
 export class LoginComponent{
 
 
-  constructor(){}
+  constructor(regser: RegisterService){}
 
   loginUser(event)
   {
@@ -21,6 +22,8 @@ export class LoginComponent{
     console.log(email,password)
   }
 
-
-
+  onSubmit(){
+    console.log()
+  }
+  
 }

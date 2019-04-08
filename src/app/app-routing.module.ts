@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { CalcComponent } from './pages/calc/calc.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 
@@ -15,7 +16,8 @@ const routes: Routes=[
 {path: 'contact',component: ContactComponent},
 {path: 'calc',component: CalcComponent},
 {path: 'register',component: RegisterComponent},
-{path: 'login',component: LoginComponent}
+{path: 'login',component: LoginComponent},
+{path: 'profile',component:ProfileComponent}
 ];
 
 @NgModule({

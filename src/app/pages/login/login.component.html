@@ -7,15 +7,21 @@
   <table bgcolor="#FFF5EE">
     <tr>
       <td>Email Address: </td>
-      <td><input  minlength ="5" type="email" id="email" placeholder="Enter Username"><br><br></td>
+      <td><input  minlength ="5" type="email" id="email" placeholder="Enter Username" required><br><br></td>
     </tr> 
     <tr>
       <td>Password:</td>
-      <td><input type="password" id="password" placeholder="Enter Password"><br><br></td>
+      <td><input type="password" id="password" placeholder="Enter Password" required><br><br></td>
     </tr>
-    <input type="submit" class="sub" value="Log In">
+    <!--<input type="submit" class="sub" value="Log In">-->
+
+    <button type="submit" class="sub" (click)="onSubmit()"routerLink="/profile">Submit</button>
   </table>
 </form>
+
+<div>
+  
+</div>
 
 <img src="../../../assets/Textbook-clipart-stacked-books-stack-of-books-clipart (1).jpg" class="cover" alt="Angular 7 ">
 <img src="../../../assets/depositphotos_19328007-stock-photo-stack-of-books.jpg" class="cover1" alt="Angular 7 ">
