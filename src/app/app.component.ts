@@ -21,10 +21,6 @@ export class AppComponent implements OnInit {
       }, 1000);
 
       setTimeout(() => {
-        observer.error(new Error("Subscription Error!"));
-      },3000);
-
-      setTimeout(() => {
         observer.next(2);
       }, 5000);
 
