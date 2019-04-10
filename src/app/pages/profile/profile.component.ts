@@ -8,14 +8,35 @@ import { Component} from '@angular/core';
 export class ProfileComponent{
 
   userData:any=[
-    {name:"Murder of Roger Ackroyd", Genre:"Thriller", Author:"Agatha Christie"},
-    {name:"Wuthering Heights", Genre:"Gothic fiction", Author:"Emily Brontë"},
-    {name:"The fault in our stars", Genre:"YA fiction", Author:"John Green"},
-    {name:"Famous Five", Genre:"Adventure fiction", Author:"Enid Blyton"}
+  {
+    name:"Murder of Roger Ackroyd", 
+    Genre:"Thriller", 
+    Author:"Agatha Christie",
+    photo:"../../../assets/mora.jpg"
+  },
+  {
+    name:"Wuthering Heights", 
+    Genre:"Gothic fiction", 
+    Author:"Emily Brontë",
+    photo:"../../../assets/wh.jpg"
+  },
+  {
+    name:"The fault in our stars", 
+    Genre:"YA fiction", 
+    Author:"John Green",
+    photo:"../../../assets/tfios.jpg"
+  },
+  {
+    name:"Famous Five", 
+    Genre:"Adventure fiction", 
+    Author:"Enid Blyton",
+    photo:"../../../assets/ff5.jpg"
+  }
   ];
 
   getUser(user):void{
     console.log(user);
+    confirm(JSON.stringify(user));
   }
 
   constructor() {

@@ -1,16 +1,12 @@
 <div>
-  <h3 class="h">Welcome to your Profile !</h3><br>
+  <h4 class="h">Welcome to your Profile !</h4>
+  <h5>Here are some of the best works to inspire you!</h5>
   <table class="table table-trapped" >
-      <tr>
-        <th> Title </th>
-        <th> Genre </th>
-        <th> Author </th>
-      </tr>
+
       <tbody>
         <tr *ngFor="let data of userData">
-            <td>{{data.name}}</td>
-            <td>{{data.Genre}}</td>
-            <td>{{data.Author}}</td>
+            <td><b>{{data.name}}</b></td>
+            <td><img src="{{data.photo}}"></td>
             <td><button class="btn" (click)="getUser(data)">Know More</button></td>
         </tr>
       </tbody>
