@@ -10,7 +10,11 @@ import { RegisterService } from '../register/register.service';
 })
 export class LoginComponent{
 
-
+  show =false;
+  login(){
+    this.show = !this.show;
+ 
+  }
   constructor(regser: RegisterService){}
 
   loginUser(event)
@@ -23,7 +27,11 @@ export class LoginComponent{
   }
 
   onSubmit(){
-    console.log()
+    console.log();
+
+  }
+  popup(){
+    alert("Successfully Logged in.")
   }
   
 }

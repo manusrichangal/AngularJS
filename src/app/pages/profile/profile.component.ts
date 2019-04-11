@@ -7,6 +7,8 @@ import { Component} from '@angular/core';
 })
 export class ProfileComponent{
 
+
+
   userData:any=[
   {
     name:"Murder of Roger Ackroyd", 
@@ -36,7 +38,8 @@ export class ProfileComponent{
 
   getUser(user):void{
     console.log(user);
-    confirm(JSON.stringify(user));
+    alert(JSON.stringify(user));
+
   }
 
   constructor() {
