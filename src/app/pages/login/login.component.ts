@@ -12,7 +12,7 @@ export class LoginComponent{
 
   show =false;
   login(){
-    this.show = !this.show;
+    this.show = true;
  
   }
   constructor(regser: RegisterService){}
