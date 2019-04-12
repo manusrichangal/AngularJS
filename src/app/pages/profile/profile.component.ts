@@ -41,7 +41,6 @@ export class ProfileComponent{
     alert(JSON.stringify(user));
 
   }
-
   constructor() {
     console.log(this.userData);
    }
