@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, EmailValidator } from '@angular/forms';
 import { RegisterService } from '../register/register.service';
 
 
@@ -9,6 +9,7 @@ import { RegisterService } from '../register/register.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
+
 
   show =false;
   login(){

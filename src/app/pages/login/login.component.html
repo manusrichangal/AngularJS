@@ -2,30 +2,24 @@
 <h2 class="h">Please Log in to continue </h2>
 <h5 class="h4">Write without fear, Edit without Mercy </h5><br>
 <h6 class="h6">New Register ?</h6><button class="button1" routerLink="/register"><u>Sign up</u></button>
-<div class="form">
-<form (submit)="loginUser($event)" action="/action_page.php">
+<div class="form-group">
+<form #form1="ngForm" (submit)="loginUser($event)" action="/action_page.php">
+
   <table bgcolor="#FFF5EE">
     <tr>
       <td>Email Address: </td>
-      <td><input  minlength ="5" type="email" id="email" placeholder="Enter Username" required><br><br></td>
+      <td><input  minlength ="5" type="email" id="email" name="email" class="form-control" placeholder="Enter Username" ngModel required><br></td>
     </tr> 
     <tr>
       <td>Password:</td>
-      <td><input type="password" id="password" placeholder="Enter Password" required><br><br></td>
+      <td><input type="password" id="password" placeholder="Enter Password" class="form-control" name="password" ngModel required><br></td>
     </tr>
-    <!--<input type="submit" class="sub" value="Log In">-->
 
-    <button type="submit" class="sub" (click)="onSubmit()" (click)="login()" >Submit</button><button class="toggle-panel" class="sub" (click)="popup()" *ngIf="show" routerLink="/profile">Log In</button>
+
+    <button type="submit" class="sub" (click)="onSubmit()" (click)="login()" [disabled]="!form1.valid" >Submit</button>
+    <button class="toggle-panel" class="sub" (click)="popup()" *ngIf="show" routerLink="/profile">Log In</button>
   </table>
+
 </form>
-
-
-
-  
-
-
-<img src="../../../assets/Textbook-clipart-stacked-books-stack-of-books-clipart (1).jpg" class="cover" alt="Angular 7 ">
-<img src="../../../assets/depositphotos_19328007-stock-photo-stack-of-books.jpg" class="cover1" alt="Angular 7 ">
-<img src="../../../assets/g124.PNG" class="cover2" alt="Angular 7 ">
-<img src="../../../assets/h124.PNG" class="cover3" alt="Angular 7 ">
 </div>
+<img src="../../../assets/h124.PNG" class="cover3" alt="Angular 7 ">

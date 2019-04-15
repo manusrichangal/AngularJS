@@ -22,7 +22,7 @@
         margin-right: auto;
         text-align: left; 
         position: absolute;
-        width: 240px;
+        width: 270px;
         height: 100px;
         top:0;
         bottom: 0;
@@ -105,8 +105,8 @@ background-color: rgb(245, 237, 224);
         .cover3{
             height: 200px; width:auto;
             position: absolute;
-            right: 270px;
-            bottom: 64px;
+            right: 50px;
+            bottom: 54px;
         }
 
 

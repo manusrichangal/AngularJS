@@ -54,7 +54,7 @@ background-color: rgb(245, 237, 224);
 }
 
 .form-group{
-    background-color: #f0efd2;
+    background-color: #FFF5EE;
     border-radius: 7px;
     box-shadow: 5px 10px 10px rgb(117, 115, 115);
     height: 21em;
@@ -103,6 +103,6 @@ table {
 .cover3{
     height: 200px; width:auto;
     position: absolute;
-    right: 230px;
-    bottom: 64px;
+    right: 50px;
+    bottom: 54px;
 }

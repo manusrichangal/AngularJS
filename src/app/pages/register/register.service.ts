@@ -7,19 +7,20 @@ export class RegisterService {
 
   
 
-  register(user){
+  register(user)
+  {
+
     localStorage.setItem('username', JSON.stringify(user.username));
-    let u = console.log("Username : "+localStorage.getItem('username'));
+    console.log("Username : "+localStorage.getItem('username'));
     
     localStorage.setItem('phone', JSON.stringify(user.number));
     console.log("Phone : "+localStorage.getItem('phone'));
 
     localStorage.setItem('password', JSON.stringify(user.password));
-    let p = console.log("Password : "+localStorage.getItem('password'));
+    console.log("Password : "+localStorage.getItem('password'));
 
     localStorage.setItem('cnfpass', JSON.stringify(user.cnfpassword));
     console.log("Password Confirmed "+localStorage.getItem('cnfpass'));
-
  
   }
 }
