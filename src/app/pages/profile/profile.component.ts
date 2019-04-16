@@ -1,13 +1,12 @@
 import { Component} from '@angular/core';
 
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent{
-
-
 
   userData:any=[
   {
@@ -45,4 +44,12 @@ export class ProfileComponent{
     console.log(this.userData);
    }
 
+   userData1:any=[
+    {
+      item1:"Fiction", 
+      item2:"Non-Fiction", 
+      item3:"Fantasy",
+      item4:"Mystery"
+    }
+  ]
 }
